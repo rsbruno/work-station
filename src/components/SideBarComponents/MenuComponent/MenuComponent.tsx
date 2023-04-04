@@ -11,53 +11,40 @@ import { BadgeComponent } from '@/components/BadgeComponent/BadgeComponent'
 
 export function MenuComponent() {
     return <>
-        <ul className={styles.container}>
-            <li>
-                <Buttons.NavigateButton
-                    rigtIconComponent={<BadgeComponent badge={2} />}
-                    leftIconComponent={<RxDashboard size={20} />}
-                    label='Página Principal'
-                    theme='primary'
-                />
-            </li>
-            <li>
-                <Buttons.NavigateButton
-                    rigtIconComponent={<BadgeComponent />}
-                    leftIconComponent={<SlNotebook size={20} />}
-                    label='Minhas Tarefas'
-                    theme='primary'
-                />
-            </li>
-            <li>
-                <Buttons.NavigateButton
-                    leftIconComponent={<HiOutlineComputerDesktop size={20} />}
-                    label='Meus Projetos' rigtIconComponent={<BadgeComponent />}
-                    theme='primary'
-                />
-            </li>
-            <li>
-                <Buttons.NavigateButton
-                    leftIconComponent={<HiOutlineBuildingOffice2 size={20} />}
-                    rigtIconComponent={<BadgeComponent />}
-                    label='Empresas'
-                    theme='primary'
-                />
-            </li>
-            <li><span className={styles.divider} /></li>
-            <li>
-                <Buttons.NavigateButton
-                    leftIconComponent={<BsGear size={20} />}
-                    label='Configurações'
-                    theme='primary'
-                />
-            </li>
-            <li>
-                <Buttons.NavigateButton
-                    leftIconComponent={<TfiPowerOff size={20} />}
-                    theme='primary'
-                    label='Sair'
-                />
-            </li>
-        </ul>
+        <Buttons.NavigateButton
+            iconRight={<BadgeComponent badge={2} />}
+            iconLeft={<RxDashboard size={20} />}
+            labelText='Página Principal'
+            theme='primary'
+        />
+        <Buttons.NavigateButton
+            iconRight={<BadgeComponent />}
+            iconLeft={<SlNotebook size={20} />}
+            labelText='Minhas Tarefas'
+            theme='primary'
+        />
+        <Buttons.NavigateButton
+            iconLeft={<HiOutlineComputerDesktop size={20} />}
+            iconRight={<BadgeComponent />}
+            labelText='Meus Projetos'
+            theme='primary'
+        />
+        <Buttons.NavigateButton
+            iconLeft={<HiOutlineBuildingOffice2 size={20} />}
+            iconRight={<BadgeComponent />}
+            labelText='Empresas'
+            theme='primary'
+        />
+        <span className={styles.divider} />
+        <Buttons.NavigateButton
+            iconLeft={<BsGear size={20} />}
+            labelText='Configurações'
+            theme='primary'
+        />
+        <Buttons.NavigateButton
+            iconLeft={<TfiPowerOff size={20} />}
+            theme='primary'
+            labelText='Sair'
+        />
     </>
 }

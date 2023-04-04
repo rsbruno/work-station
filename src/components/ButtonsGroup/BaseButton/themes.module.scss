@@ -1,0 +1,11 @@
+@import "@/styles/constants.scss";
+@import "@/styles/typography.scss";
+
+.variation_secondary {
+  background: $YELLOW_90_100;
+  color: $TEXT_COLOR_90_100;
+  &:hover {
+    background: $LIGHT_90_100;
+    border-color: $YELLOW_90_100;
+  }
+}

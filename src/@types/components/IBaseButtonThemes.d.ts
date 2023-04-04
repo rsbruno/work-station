@@ -1,1 +1,1 @@
-declare type IBaseButtonThemes = "normal" | "primary"
+declare type IBaseButtonThemes = "normal" | "primary" | "secondary"

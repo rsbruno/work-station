@@ -1,27 +1,18 @@
 import Link from "next/link";
-import BaseButton from "../BaseButton/BaseButton";
+import BaseButton from "../BaseButton/Base/BaseButton";
 import styles from './styles.module.scss'
-import classNames from 'classnames'
+import stylesthemes from './stylethemes.module.scss'
+import BaseChildren, { IBaseChildren } from "../BaseButton/BaseChildren/BaseChildren";
 
-interface INavigateButton {
-    leftIconComponent?: any;
-    rigtIconComponent?: any;
-    label: string;
+interface INavigateButton extends IBaseChildren {
     theme: IBaseButtonThemes;
 }
 
-export default function NavigateButton({ leftIconComponent, label, rigtIconComponent, theme }: INavigateButton) {
+export default function NavigateButton({ theme, ...propsBaseChildren }: INavigateButton) {
     return <>
-        <BaseButton className={styles.basebutton_custom}>
+        <BaseButton className={`${styles.basebutton_custom} ${stylesthemes[`variation_${theme}`]}`}>
             <Link href={""} className={styles.linkstyles}>
-                <div className={classNames({
-                    [styles.container]: true,
-                    [styles[`variation_${theme}`]]: true,
-                })}>
-                    {leftIconComponent && <span className={styles.container__left_icon}>{leftIconComponent}</span>}
-                    <strong className={styles.container__label_text}>{label}</strong>
-                    {rigtIconComponent && <span className={styles.container__right_icon}>{rigtIconComponent}</span>}
-                </div>
+                <BaseChildren {...propsBaseChildren} classText={styles.base_children_text} />
             </Link>
         </BaseButton>
     </>

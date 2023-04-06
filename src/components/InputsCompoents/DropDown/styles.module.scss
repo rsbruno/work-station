@@ -1,0 +1,98 @@
+@import "@/styles/constants.scss";
+@import "@/styles/typography.scss";
+
+.container {
+  position: relative;
+  height: 56px;
+  width: 100%;
+}
+
+.content_button {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  padding-right: 13px;
+  &__text {
+    font-family: $TEXT_PRIMARY;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    text-align: left;
+    color: $PRIMARY_90_70;
+    white-space: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+  &__icon {
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: solid 1px $PRIMARY_90_100;
+    color: $PRIMARY_90_100;
+    transition: all ease 400ms;
+  }
+  &__icon_active {
+    transform: rotateZ(180deg);
+  }
+}
+
+.list {
+  width: 100%;
+  height: auto;
+  background: $LIGHT_90_100;
+  margin-top: 8px;
+  box-shadow: $DEFAULT_SHADOW;
+  border-radius: 15px;
+  overflow: hidden;
+  border: none;
+  position: absolute;
+  top: 100%;
+  transition: all ease 400ms;
+  opacity: 0;
+  height: 0;
+  transform: translateY(-20px);
+  &__content {
+    list-style: none;
+    &__option {
+      background: $LIGHT_90_100;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 20px;
+      font-family: $TEXT_PRIMARY;
+      font-size: 1rem;
+      font-weight: 400;
+      color: $TEXT_COLOR_90_100;
+      &:hover {
+        background: $PRIMARY_90_20;
+      }
+    }
+    &__option_active {
+      background: $PRIMARY_90_70;
+      color: $TEXT_COLOR_10_100;
+      &:hover {
+        background: $PRIMARY_90_70;
+        color: $TEXT_COLOR_10_100;
+      }
+    }
+  }
+}
+
+.list_opned {
+  transform: translateY(0);
+  opacity: 1;
+  height: min-content;
+  z-index: 1;
+  border: solid 1px $PRIMARY_90_100;
+}

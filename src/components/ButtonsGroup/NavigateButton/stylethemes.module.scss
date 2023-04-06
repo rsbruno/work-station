@@ -1,0 +1,13 @@
+@import "@/styles/constants.scss";
+@import "@/styles/typography.scss";
+
+.variation_primary {
+  background: transparent;
+  transition: all ease 400ms;
+  .base_children_text {
+    color: red !important;
+  }
+  &:hover {
+    background: $GRADIENT_WHITE_PRIMARY;
+  }
+}

@@ -1,0 +1,34 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  display: grid;
+  grid-template-areas:
+    "group_tickets_progress group_todo_list"
+    "group_data_list group_todo_list"
+    "group_data_graphs group_data_graphs";
+  grid-template-columns: auto 300px;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.group_tickets_progress {
+  grid-area: group_tickets_progress;
+  display: flex;
+  gap: 20px;
+}
+.group_data_list {
+  grid-area: group_data_list;
+  display: flex;
+  gap: 20px;
+}
+
+.group_data_graphs {
+  grid-area: group_data_graphs;
+  display: flex;
+  gap: 20px;
+}
+
+.group_todo_list {
+  grid-area: group_todo_list;
+}

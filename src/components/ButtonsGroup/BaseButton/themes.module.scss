@@ -1,0 +1,24 @@
+@import "@/styles/constants.scss";
+@import "@/styles/typography.scss";
+
+.variation_primary {
+  background: $PRIMARY_90_100;
+  transition: all ease 400ms;
+  &__text {
+    color: $TEXT_COLOR_10_100 !important;
+  }
+  &:hover {
+    background: $PRIMARY_90_100;
+    border-color: $PRIMARY_90_100;
+    filter: brightness(1.1);
+  }
+}
+
+.variation_secondary {
+  background: $YELLOW_90_100;
+  color: $TEXT_COLOR_90_100;
+  &:hover {
+    background: $LIGHT_90_100;
+    border-color: $YELLOW_90_100;
+  }
+}

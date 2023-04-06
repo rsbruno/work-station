@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;600&display=swap");
+@import "@/styles/constants.scss";
+@import "@/styles/typography.scss";
 
 * {
   margin: 0;
@@ -11,4 +13,23 @@ button {
   outline: none;
   background: transparent;
   cursor: pointer;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  background: $PRIMARY_90_20 !important;
+  margin-bottom: 8px;
+}
+
+.react-calendar__month-view__weekdays {
+  abbr {
+    text-decoration: none;
+    font-family: $TEXT_PRIMARY;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: $TEXT_COLOR_90_100;
+  }
+}
+
+.rodal-close {
+  display: none;
 }

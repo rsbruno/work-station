@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 
 export default function DashBoardPage() {
     return <>
+
         <section className={styles.container}>
             <section className={styles.group_tickets_progress}>
                 <CurrentTicketComponents />

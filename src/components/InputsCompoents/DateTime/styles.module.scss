@@ -1,0 +1,109 @@
+@import "@/styles/constants.scss";
+@import "@/styles/typography.scss";
+
+.calendar_container {
+  border: solid 1px $PRIMARY_90_100;
+  border-top: none;
+  border-radius: 20px;
+  padding-bottom: 5px;
+  box-shadow: $DEFAULT_SHADOW;
+  overflow: hidden;
+}
+
+.tile_day_container {
+  font-family: $TEXT_PRIMARY;
+  font-size: 1rem;
+  font-weight: 400;
+  background: transparent;
+  color: $TEXT_COLOR_90_100;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
+  transition: all ease 400ms;
+  &:disabled {
+    background: transparent;
+    abbr {
+      background: $PRIMARY_90_20;
+    }
+    &:hover {
+      background: transparent !important;
+      cursor: not-allowed;
+      abbr {
+        background: $PRIMARY_90_20 !important;
+      }
+    }
+  }
+
+  &:focus {
+    background: transparent !important;
+    abbr {
+      background: $PRIMARY_90_100;
+      color: $TEXT_COLOR_10_100;
+    }
+    &:hover {
+      background: transparent !important;
+      cursor: not-allowed;
+      abbr {
+        background: $PRIMARY_90_100 !important;
+        color: $TEXT_COLOR_10_100;
+      }
+    }
+  }
+
+  abbr {
+    background: transparent;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: all ease 400ms;
+  }
+  &:hover {
+    background: transparent !important;
+    position: relative;
+    abbr {
+      background: $PRIMARY_90_20;
+    }
+  }
+}
+
+.calendar {
+  &__wrapper {
+    width: 100%;
+    height: min-content;
+    margin-top: 8px;
+  }
+}
+
+.calendar_content {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 28px;
+  font-family: $TEXT_PRIMARY;
+  font-size: 1rem;
+  background: transparent;
+  color: $TEXT_COLOR_80_100;
+  &__text {
+    display: block;
+    font-weight: 400;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  &__icon {
+    height: 100%;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

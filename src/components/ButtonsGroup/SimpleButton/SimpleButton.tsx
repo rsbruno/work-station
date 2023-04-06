@@ -7,7 +7,12 @@ interface ISimpleButton extends IBaseChildren, IBaseButton { }
 export default function SimpleButton({ theme, iconLeft, labelText, iconRight, className, ...props }: ISimpleButton) {
     return <>
         <BaseButton className={`${themes[`variation_${theme}`]} ${className}`} {...props}>
-            <BaseChildren iconLeft={iconLeft} labelText={labelText} iconRight={iconRight} />
+            <BaseChildren
+                classText={`${themes[`variation_${theme}__text`]}`}
+                labelText={labelText}
+                iconRight={iconRight}
+                iconLeft={iconLeft}
+            />
         </BaseButton>
     </>
 }
